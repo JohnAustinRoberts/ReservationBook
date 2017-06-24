@@ -21,7 +21,7 @@
 			<br>
 
 			<div class="text-center">
-				<a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+				<a href="/reservation"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
 				<a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
@@ -91,10 +91,10 @@
 
 		// Here we grab the form elements
 		var newReservation = {
-			customerName: $('#reserve_name').val().trim(),
+			name: $('#reserve_name').val().trim(),
 			phoneNumber: $('#reserve_phone').val().trim(),
-			customerEmail: $('#reserve_email').val().trim(),
-			customerID: $('#reserve_uniqueID').val().trim()
+			email: $('#reserve_email').val().trim(),
+			uniqueID: $('#reserve_uniqueID').val().trim()
 		};
 
 		console.log(newReservation);
