@@ -27,17 +27,17 @@ var reservations = {
       {name: "Jeff",
        phoneNumber: 1111111,
        email: "Jedi Master",
-       uniqueID: Jeff,
+       uniqueID: "Jeff",
       }, 
       {name: "Greg",
        phoneNumber: 2222222,
        email: "greg@greg.com",
-       uniqueID: Greg,
+       uniqueID: "Greg",
       }, 
       {name: "Yoda",
        phoneNumber: 3333333,
        email: "JediMasterBiatch@jedi.com",
-       uniqueID: Yoda,
+       uniqueID: "Yoda",
       }
     ]
   },
@@ -70,8 +70,8 @@ app.get("/reserve", function(req, res) {
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 //route to get to the current reservations
-app.get("/reservations", function(req, res) {
-  res.sendFile(path.join(__dirname, "reservations.html"));
+app.get("/reservation", function(req, res) {
+  res.sendFile(path.join(__dirname, "reservation.html"));
 });
 //display the api data for current reservations
 app.get("/api/tables", function(req, res) {
@@ -90,10 +90,12 @@ app.get("/api/clear", function(req, res) {
 app.post("/api/new", function (req, res) {
   var newReservation = req.body;
   console.log(newReservation);
-  if (reservations.currentReservations.tables.length > 5) {
+  if (reservations.currentReservations.tables.length > 4) {
     reservations.waitlist.tables.push(newReservation);
+    res.status(200).send('added to waitlist');
   } else {
     reservations.currentReservations.tables.push(newReservation);
+    res.status(200).send("success! you've got a table.");
   }
   res.sendFile(path.join(__dirname, 'reservations.html'))
 });
