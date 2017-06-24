@@ -1,0 +1,25 @@
+{
+  "name": "reservationbook",
+  "version": "1.0.0",
+  "description": "A program to manage table reservations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnAustinRoberts/ReservationBook.git"
+  },
+  "author": "GreenMonkeys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnAustinRoberts/ReservationBook/issues"
+  },
+  "homepage": "https://github.com/JohnAustinRoberts/ReservationBook#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "path": "^0.12.7"
+  }
+}
