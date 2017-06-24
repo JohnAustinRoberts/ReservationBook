@@ -84,7 +84,7 @@ app.get("/api/waiting-list", function(req, res) {
 //clear the reservations and waiting list
 app.get("/api/clear", function(req, res) {
   reservations = reset;
-  res.sendFile(path.join(__dirname, 'reservations.html'));
+  res.sendFile(path.join(__dirname, 'reservation.html'));
   });
 //create new reservation and add it to tables if there are less than 5 entries, or add it to the waitlist.
 app.post("/api/new", function (req, res) {
