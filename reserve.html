@@ -9,11 +9,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <style>
-  
+
   .jumbotron {
     text-align: center;
   }
-
+  
 
   </style>
 
@@ -23,15 +23,34 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Reservation Book</h1>
-      <h3>Book your reservation now!</h3>
+      <h3>List of reservations</h3>
       <hr>
-      <a href="/reservations">
+      <a href="./reservations.html">
       <button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span>Add Reservation</button>
       </a>
-      <a href="/reserve">
-      <button type="button" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-list"></span>Tables</button>
+      <a href='./index.html'>
+      <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span>Home</button>
       </a>
     </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Reservations</strong></h3>
+          </div>
+          <div class="panel-body">
+            <div class="well">
+              <h2 id="name">Tim</h2>
+              <div id="Reservations">
+                <h3><strong>Phone Number:</strong> <span id="phoneNumber">732-808-7791</span></h3>
+                <h3><strong>Email:</strong> <span id="email">TimTim@gmail.com</span></h3>
+                <h3><strong>Unique Id:</strong> <span id="uniqueId">3</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="text/javascript">
    
@@ -63,7 +82,7 @@
         }
 
         // Clear the form when submitting
-      $('#reserve_name').val("");
+        $('#reserve_name').val("");
       $('#reserve_phone').val("");
       $('#reserve_email').val("");
       $('#reserve_Id').val("");
@@ -76,6 +95,6 @@ return false;
 
 
   </script>
-
+    
 </body>
 </html>
